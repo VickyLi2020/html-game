@@ -12,6 +12,7 @@ $(document).keypress(function () {
 })
 
 function nextSequence() {
+    userClickedPattern = [];
     level++;
     $("#level-title").text("Level " + level);
     var randomNumber = Math.floor(Math.random() * 4);
@@ -48,7 +49,6 @@ function checkAnswer(currentLevel) {
             setTimeout(function () {
                 nextSequence();
             }, 1000);
-            userClickedPattern = [];
         }
     } else {
         console.log("wrong");
@@ -67,3 +67,4 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
+
